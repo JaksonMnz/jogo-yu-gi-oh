@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu-Gi-Oh Jo-Ken-Pô Edition</title>
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    
+    <!-- framework -->
+    <link rel="stylesheet" href="./src/styles/buttons.css">
+    <link rel="stylesheet" href="./src/styles/containers_and_frames.css">
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- faviicon -->
+    <link rel="shortcut icon" href="./src/assets/favicon/Favicon.ico" type="image/x-icon">
+
+    <!-- mais style -->
+    <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+    <audio id="bgm" loop>
+        <source src="./src/assets/audios/egyptian_duel.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="bg-video">
+
+        <video class="video" autoplay loop muted>
+            <source src="./src/assets/video/yugi.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+    <div class="conteiner">
+
+        <div class="conteiner_da_esquerda framed-golden-2">
+
+            <div class="caixa_de_pontuacao quadro">
+                <span id="marcar_pontos"> Win: 0 | Lose: 0</span>
+            </div>
+
+            <div class="menu_avatar">
+                <img id="imagem_da_carta">
+            </div>
+
+            <div class="detalhes_da_carta quadro">
+                <p id="nome_da_carta">Selecione</p>
+                <p id="tipo_da_carta">Uma Carta</p>
+            </div>
+        </div>
+
+        <div class="conteiner_da_direita">
+
+            <div class="caixa_da_carta_conteiner">
+
+                <div class="caixa_da_carta framed" id="cartas_do_computador"></div>
+
+                <div class="carta_batalha_conteiner">
+
+                    <div class="topo_da_batalha">
+
+                        <div class="campo_interno_da_carta">
+
+                            <img id="carta_de_campo_do_jogador" height="180px"
+                            width="125px">
+                            </img>
+
+                        </div>
+
+                        <img height="100px" src="./src/assets/icons/millenium2.png">
+
+                        <div class="campo_interno_da_carta">
+
+                            <img id="carta_de_campo_do_computador" height="180px"
+                            width="125px">
+                            </img>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="botao_da_batalha">
+
+                        <button
+                        id="proximo_duelo" class="rpgui-button" onclick="resetDuel()"></button>
+
+                    </div>
+                </div>
+                
+                <div class="caixa_da_carta framed" id="cartas_do_jogador"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./src/scripts/engine.js"></script>
+</body>
+</html>
